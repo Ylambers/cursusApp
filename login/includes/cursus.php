@@ -47,6 +47,7 @@ if ($role == 2){
         $place = mysqli_real_escape_string($db, $_POST['place']);
         $start_time = mysqli_real_escape_string($db, $_POST['start_time']);
         $end_time = mysqli_real_escape_string($db, $_POST['end_time']);
+        $places = mysqli_real_escape_string($db, $_POST['places']);
 
         $error = 0;
 
@@ -58,7 +59,7 @@ if ($role == 2){
 
 
         if($error == 0){
-            $query = "INSERT INTO cursus (event_name, place, start_time, end_time, event_date, description) VALUES ('$event_name','$place', '$start_time', '$end_time', '$date',  '$description')";
+            $query = "INSERT INTO cursus (event_name, place, start_time, end_time, event_date, description, places) VALUES ('$event_name','$place', '$start_time', '$end_time', '$date',  '$description', '$places')";
             if (!mysqli_query($db, $query)) {
                 die('Error ' . mysqli_error($db));
             }else{
@@ -240,8 +241,16 @@ if ($role == 2){
                 <option name="year" value="2016">2019</option>
             </select>
 
+            <label>Aantal plekken</label>
+            <input type="number" name="places" min="1" max="500" placeholder="1">
+
             <input type="submit" name="cursus" value="Aanmaken"/>
         </form>
     ';
+
+
+    $queryCursus = "SELECT * FROM cursus";
+
+
     mysqli_close($db);
 }
