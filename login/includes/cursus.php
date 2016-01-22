@@ -40,9 +40,9 @@ if ($role == 2){
         $month = mysqli_real_escape_string($db, $_POST['month']);
         $day = mysqli_real_escape_string($db, $_POST['day']);
         $year = mysqli_real_escape_string($db, $_POST['year']);
-        $date = $day ." " .$month ." ".$year;
+        $date = $day. '-' .$month .'-'. $year;
 
-        $name = mysqli_real_escape_string($db, $_POST['name']);
+        $event_name = mysqli_real_escape_string($db, $_POST['event_name']);
         $description = mysqli_real_escape_string($db, $_POST['description']);
         $place = mysqli_real_escape_string($db, $_POST['place']);
         $start_time = mysqli_real_escape_string($db, $_POST['start_time']);
@@ -50,19 +50,19 @@ if ($role == 2){
 
         $error = 0;
 
-//        if(strlen($name < 5)){$error++; echo 'graag een langere naam in vullen';}
-//        if(strlen($description < 5)){$error++; echo 'graag een langere beschrijving in vullen';}
-//        if(strlen($place < 3)){$error++; echo 'graag een langere plaatsnaam in vullen';}
-//        if(strlen($end_time < $start_time)){$error++; echo 'Graag een correcte tijd invoeren';}
+        if(strlen($event_name) < 5){$error++; echo 'Graag meer characters invoeren / minimaal 5' . "<br/>" ;}
+        if(strlen($description) < 5){$error++; echo 'Graag meer characters invoeren / minimaal 5'. "<br/>" ;}
+        if(strlen($place) < 3){$error++; echo 'Graag meer characters invoeren / minimaal 3'. "<br/>";}
+        if($start_time > $end_time){$error++; echo 'Graag een geldige datum invoeren'. "<br/>";}
+        if($end_time < $start_time){$error++; echo 'Graag een geldige datum invoeren'. "<br/>";}
+
 
         if($error == 0){
-//            $query = "INSERT INTO curcus SET name='$name', description='$description', place='$place', start_time='$start_time', end_time='$end_time', date='$date' ";
-            $query = "INSERT INTO cursus (event_name, description, place, start_time, end_time, event_date ) VALUES ($description, $name,$place, $start_time, $end_time, $date)";
-
+            $query = "INSERT INTO cursus (event_name, place, start_time, end_time, event_date, description) VALUES ('$event_name','$place', '$start_time', '$end_time', '$date',  '$description')";
             if (!mysqli_query($db, $query)) {
                 die('Error ' . mysqli_error($db));
             }else{
-                header("Refresh:0");
+
             }
         }
 
@@ -71,10 +71,10 @@ if ($role == 2){
     echo '
         <form method="POST" action="" role="form" xmlns="http://www.w3.org/1999/html">
             <label>Naam:</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="event_name" id="name"> </input>
 
             <label>Beschrijving</label>
-            <input type="text" name="description" id="description" />
+            <input type="text" name="description" id="description"> </input>
 
             <label>Plaats</label>
             <input type="text" name="place" id="place" />
@@ -201,36 +201,36 @@ if ($role == 2){
 
             <select name="day">
                 <option name="1" value="1">1</option>
-                <option name="2" value="1">1</option>
-                <option name="3" value="1">1</option>
-                <option name="4" value="1">1</option>
-                <option name="5" value="1">1</option>
-                <option name="6" value="1">1</option>
-                <option name="7" value="1">1</option>
-                <option name="8" value="1">1</option>
-                <option name="9" value="1">1</option>
-                <option name="10" value="1">1</option>
-                <option name="11" value="1">1</option>
-                <option name="12" value="1">1</option>
-                <option name="13" value="1">1</option>
-                <option name="14" value="1">1</option>
-                <option name="15" value="1">1</option>
-                <option name="16" value="1">1</option>
-                <option name="17" value="1">1</option>
-                <option name="18" value="1">1</option>
-                <option name="19" value="1">1</option>
-                <option name="20" value="1">1</option>
-                <option name="21" value="1">1</option>
-                <option name="22" value="1">1</option>
-                <option name="23" value="1">1</option>
-                <option name="24" value="1">1</option>
-                <option name="25" value="1">1</option>
-                <option name="26" value="1">1</option>
-                <option name="27" value="1">1</option>
-                <option name="28" value="1">1</option>
-                <option name="29" value="1">1</option>
-                <option name="30" value="1">1</option>
-                <option name="31" value="1">1</option>
+                <option name="2" value="2">2</option>
+                <option name="3" value="3">3</option>
+                <option name="4" value="4">4</option>
+                <option name="5" value="5">5</option>
+                <option name="6" value="6">6</option>
+                <option name="7" value="7">7</option>
+                <option name="8" value="8">8</option>
+                <option name="9" value="9">9</option>
+                <option name="10" value="10">10</option>
+                <option name="11" value="11">11</option>
+                <option name="12" value="12">12</option>
+                <option name="13" value="13">13</option>
+                <option name="14" value="14">14</option>
+                <option name="15" value="15">15</option>
+                <option name="16" value="16">16</option>
+                <option name="17" value="17">17</option>
+                <option name="18" value="18">18</option>
+                <option name="19" value="19">19</option>
+                <option name="20" value="20">20</option>
+                <option name="21" value="21">21</option>
+                <option name="22" value="22">22</option>
+                <option name="23" value="23">23</option>
+                <option name="24" value="24">24</option>
+                <option name="25" value="25">25</option>
+                <option name="26" value="26">26</option>
+                <option name="27" value="27">27</option>
+                <option name="28" value="28">28</option>
+                <option name="29" value="29">29</option>
+                <option name="30" value="30">30</option>
+                <option name="31" value="31">31</option>
             </select>
 
             <select name="year">
@@ -243,4 +243,5 @@ if ($role == 2){
             <input type="submit" name="cursus" value="Aanmaken"/>
         </form>
     ';
+    mysqli_close($db);
 }
