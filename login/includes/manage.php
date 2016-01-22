@@ -2,9 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: Yaron
- * Date: 21-1-2016
- * Time: 19:37
+ * Date: 22-1-2016
+ * Time: 22:28
  */
+
 include_once('database.php');
 
 session_start();
@@ -31,16 +32,20 @@ if(!empty($_SESSION['email'])){
 }
 
 
-if ($role == 2){
+if($role == 2){
+    $manageId = $_GET['id'];
 
+    $allCursus =  "SELECT * FROM cursus WHERE id='$manageId'";
+    $queryCursus = mysqli_query($db, $allCursus);
+    $rowQuery = mysqli_fetch_array($queryCursus);
 
-    if(isset($_POST['cursus'])){
+    list($day, $month, $year) = explode("-",  $rowQuery['event_date']);
+    $date = $day. '-' .$month .'-'. $year;
 
-        /* Date */
+    if(isset($_POST['updateCursus'])){
         $month = mysqli_real_escape_string($db, $_POST['month']);
         $day = mysqli_real_escape_string($db, $_POST['day']);
         $year = mysqli_real_escape_string($db, $_POST['year']);
-        $date = $day. '-' .$month .'-'. $year;
 
         $event_name = mysqli_real_escape_string($db, $_POST['event_name']);
         $description = mysqli_real_escape_string($db, $_POST['description']);
@@ -56,32 +61,36 @@ if ($role == 2){
         if(strlen($place) < 3){$error++; echo 'Graag meer characters invoeren / minimaal 3'. "<br/>";}
         if($start_time > $end_time){$error++; echo 'Graag een geldige datum invoeren'. "<br/>";}
         if($end_time < $start_time){$error++; echo 'Graag een geldige datum invoeren'. "<br/>";}
-
+        if($places > 500){$error++; echo 'Niet meer als 500 plaatsen ingeven' . "<br />";}
 
         if($error == 0){
-            $query = "INSERT INTO cursus (event_name, place, start_time, end_time, event_date, description, places) VALUES ('$event_name','$place', '$start_time', '$end_time', '$date',  '$description', '$places')";
+            $query = "UPDATE cursus SET event_name = '$event_name', place='$place', start_time= '$start_time', end_time = '$end_time', event_date = '$date', description = '$description', places = '$places' WHERE cursus.id='$manageId' ";
             if (!mysqli_query($db, $query)) {
                 die('Error ' . mysqli_error($db));
             }else{
-
+            header("Refresh:0");
             }
         }
-
     }
 
+
+
+    /* Seperate date to var */
+
     echo '
-        <form method="POST" action="" role="form" xmlns="http://www.w3.org/1999/html">
+        <form method="POST" action="" name="updateCursus" role="form" xmlns="http://www.w3.org/1999/html">
             <label>Naam:</label>
-            <input type="text" name="event_name" id="name"> </input>
+            <input type="text" name="event_name" id="name" value="'.$rowQuery['event_name'].'"> </input>
 
             <label>Beschrijving</label>
-            <input type="text" name="description" id="description"> </input>
+            <input type="text" name="description" id="description" value="'.$rowQuery['description'].' "> </input>
 
             <label>Plaats</label>
-            <input type="text" name="place" id="place" />
+            <input type="text" name="place" id="place" value="'.$rowQuery['place'].' " />
 
             <label>Starttijd</label>
             <select name="start_time" id="start_time">
+                <option id="start_time" value="'.$rowQuery['start_time'].'">'.$rowQuery['start_time'].'</option>
                 <option id="start_time" value="00:00">00:00</option>
                 <option id="start_time" value="00:30">00:30</option>
                 <option id="start_time" value="01:00">01:00</option>
@@ -134,6 +143,7 @@ if ($role == 2){
 
             <label>Eindtijd</label>
             <select name="end_time" id="end_time">
+                <option id="end_time" value="'.$rowQuery['end_time'].'">'.$rowQuery['end_time'].'</option>
                 <option id="end_time" value="00:00">00:00</option>
                 <option id="end_time" value="00:30">00:30</option>
                 <option id="end_time" value="01:00">01:00</option>
@@ -186,6 +196,7 @@ if ($role == 2){
 
             <label>Datum</label>
             <select name="month">
+                <option name="month" value="'.$month.'">'.$month.'</option>
                 <option name="month" value="januari">januari</option>
                 <option name="month" value="februari">februari</option>
                 <option name="month" value="maart">maart</option>
@@ -201,6 +212,7 @@ if ($role == 2){
             </select>
 
             <select name="day">
+                <option name="1" value="'.$day.'">'.$day.'</option>
                 <option name="1" value="1">1</option>
                 <option name="2" value="2">2</option>
                 <option name="3" value="3">3</option>
@@ -235,6 +247,7 @@ if ($role == 2){
             </select>
 
             <select name="year">
+                <option name="year" value="'.$year.'">'.$year.'</option>
                 <option name="year" value="2016">2016</option>
                 <option name="year" value="2016">2017</option>
                 <option name="year" value="2016">2018</option>
@@ -242,27 +255,12 @@ if ($role == 2){
             </select>
 
             <label>Aantal plekken</label>
-            <input type="number" name="places" min="1" max="500" placeholder="1">
+            <input type="number" name="places" min="1" max="500" value="'.$rowQuery['places'].'"/>
 
-            <input type="submit" name="cursus" value="Aanmaken"/>
+            <input type="submit" name="updateCursus" value="Aanmaken"/>
         </form>
+
     ';
 
 
-    $allCursus = "SELECT * FROM cursus";
-    $queryCursus = mysqli_query($db, $allCursus);
-
-    while($rowCursus = mysqli_fetch_array($queryCursus)){
-        echo $rowCursus['event_name'];
-        echo $rowCursus['place'];
-        echo $rowCursus['start_time'] ;
-        echo $rowCursus['end_time'] ;
-        echo $rowCursus['event_date'] ;
-        echo $rowCursus['description'] ;
-        echo $rowCursus['places'];
-        echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanpassen of verwijderen </a>' . "<br/>";
-    }
-
-
-    mysqli_close($db);
 }
