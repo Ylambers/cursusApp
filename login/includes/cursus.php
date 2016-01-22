@@ -30,6 +30,21 @@ if(!empty($_SESSION['email'])){
     header('location: ../index.php');
 }
 
+if($role == 1){
+    $allCursus = "SELECT * FROM cursus";
+    $query = mysqli_query($db, $allCursus);
+    while($rowCursus = mysqli_fetch_array($query) ){
+        echo $rowCursus['event_name'];
+        echo $rowCursus['description'];
+        echo $rowCursus['places'];
+        echo $rowCursus['place'];
+        echo $rowCursus['start_time'];
+        echo $rowCursus['end_time'];
+        echo $rowCursus['event_date'];
+
+    }
+}
+
 
 if ($role == 2){
 

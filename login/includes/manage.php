@@ -31,6 +31,11 @@ if(!empty($_SESSION['email'])){
     header('location: ../index.php');
 }
 
+if($role == 1){
+    $manageId = $_GET['id'];
+
+
+}
 
 if($role == 2){
     $manageId = $_GET['id'];
@@ -39,6 +44,7 @@ if($role == 2){
     $queryCursus = mysqli_query($db, $allCursus);
     $rowQuery = mysqli_fetch_array($queryCursus);
 
+    /* Seperate date to var */
     list($day, $month, $year) = explode("-",  $rowQuery['event_date']);
     $date = $day. '-' .$month .'-'. $year;
 
@@ -72,10 +78,6 @@ if($role == 2){
             }
         }
     }
-
-
-
-    /* Seperate date to var */
 
     echo '
         <form method="POST" action="" name="updateCursus" role="form" xmlns="http://www.w3.org/1999/html">
