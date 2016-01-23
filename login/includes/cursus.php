@@ -53,7 +53,7 @@ if($role == 1){
         echo $rowCursus['end_time'];
         echo $rowCursus['event_date'];
         if($userId && $cursusId == $rowCursus['id'] && $id){
-            echo 'Afmelden';
+            echo 'U bent aangemeld voor deze workshop!'. "</br>";
         }else{
             echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanmelden </a>' . "<br/>";
         }
@@ -63,8 +63,6 @@ if($role == 1){
 
 
 if ($role == 2){
-
-
     if(isset($_POST['cursus'])){
 
         /* Date */
