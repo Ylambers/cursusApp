@@ -17,27 +17,38 @@ $row = mysqli_fetch_assoc($result);
 $userName = $row['firstname'] ." ". $row['lastname']. "<br/>";
 $role = $row['user_level'];
 $id = $row['id'];
-if(!empty($_SESSION['email'])){
-    echo '<div class="menubar">';
-    echo "<h2>"."Welkom ". $userName."</h2>"."<br/>";
-    if($role == 2){
-        echo '<a href="cursus.php"> curus aanmaken / aanpassen </a> ';
-    }else{
-        echo '<a href="user.php">Gegevens bewerken </a> ';
-    }
-    echo '<a href="logout.php">Uitloggen </a> ';
-    echo '</div>';
-}else{
-    header('location: ../index.php');
-}
 
 if($role == 1){
-    $manageId = $_GET['id'];
+    $idCursus = $_GET['id'];
+    $idUser = $row['id'];
 
+    $error = 0;
+    if($error == 0){
+        $query = "INSERT INTO cursus_registratie (id_user, id_cursus) VALUES ('$idUser', '$idCursus');";
 
+        if (!mysqli_query($db, $query)) {
+            die('Error ' . mysqli_error($db));
+        }else{
+            header('location: cursus.php');
+        }
+    }
 }
 
 if($role == 2){
+    if(!empty($_SESSION['email'])){
+        echo '<div class="menubar">';
+        echo "<h2>"."Welkom ". $userName."</h2>"."<br/>";
+        if($role == 2){
+            echo '<a href="cursus.php"> curus aanmaken / aanpassen </a> ';
+        }else{
+            echo '<a href="user.php">Gegevens bewerken </a> ';
+        }
+        echo '<a href="logout.php">Uitloggen </a> ';
+        echo '</div>';
+    }else{
+        header('location: ../index.php');
+    }
+
     $manageId = $_GET['id'];
 
     $allCursus =  "SELECT * FROM cursus WHERE id='$manageId'";

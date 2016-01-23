@@ -33,7 +33,18 @@ if(!empty($_SESSION['email'])){
 if($role == 1){
     $allCursus = "SELECT * FROM cursus";
     $query = mysqli_query($db, $allCursus);
+    $rowIdCursus = mysqli_fetch_array($query);
+    $idCursus = $rowIdCursus['id'];
+
     while($rowCursus = mysqli_fetch_array($query) ){
+
+        $allRegistrations = "SELECT * FROM cursus_registratie WHERE id_user='$id', id_cursus='$idCursus'";
+        echo $allRegistrations;
+        $queryRegistrations = mysqli_query($db, $allRegistrations);
+        $rowRegistrations = mysqli_fetch_array($queryRegistrations);
+        $userId = $rowRegistrations['id_user'];
+        $cursusId = $rowRegistrations['id_cursus'];
+
         echo $rowCursus['event_name'];
         echo $rowCursus['description'];
         echo $rowCursus['places'];
@@ -42,6 +53,11 @@ if($role == 1){
         echo $rowCursus['end_time'];
         echo $rowCursus['event_date'];
 
+        if($userId && $cursusId == $rowCursus['id'] && $id){
+            echo 'Afmelden';
+        }else{
+            echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanmelden </a>' . "<br/>";
+        }
     }
 }
 
