@@ -38,7 +38,17 @@ if($role == 2){
 
     $allCursus = "SELECT * FROM cursus_registratie WHERE id_cursus='$idCursus'";
     $resultCursus = mysqli_query($db, $allCursus);
-    $row = mysqli_fetch_array($resultCursus);
 
+    while($row = mysqli_fetch_array($resultCursus)){
+        $userId = $row['id_user'];
+        $allUserId = "SELECT * FROM user WHERE id='$userId'";
+        $userResult = mysqli_query($db, $allUserId);
+        while($rowUser = mysqli_fetch_array($userResult)){
+            echo $rowUser['firstname'];
+            echo $rowUser['lastname'];
+            echo $rowUser['email'];
+            echo $rowUser['phone'] . "<br/>";
+        }
+    }
 
 }

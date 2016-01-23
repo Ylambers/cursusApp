@@ -10,7 +10,7 @@ if(isset($_POST['login'])){
     $checkUser = mysqli_num_rows($runUser);
     if($checkUser > 0){
         $_SESSION['email'] = $email;
-        header('location: index.php');
+        header('location: cursus.php');
     }else{
         header("Refresh:0; url=../index.php");
     }
