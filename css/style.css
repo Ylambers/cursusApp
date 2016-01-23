@@ -1,12 +1,15 @@
 html, body{
     margin: 0;
     padding: 0;
+    background: url('../img/background.jpg');
 }
 
 .container{
     margin: 0 auto;
     width: 70%;
     height: auto;
+    min-height: 1000px;
+    background:#fff;
 }
 
 .link{
@@ -19,7 +22,6 @@ html, body{
     width: 100%;
     height: 110px;
     background: #ff0000;
-    border-radius: 5px;
     margin-top: -20px;
 }
 
