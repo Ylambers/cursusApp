@@ -1,3 +1,11 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<div class="container">
 <?php
 /**
  * Created by PhpStorm.
@@ -20,8 +28,10 @@ if(!empty($_SESSION['email'])){
     echo '<div class="menubar">';
     echo "<h2>"."Welkom ". $userName."</h2>"."<br/>";
     if($role == 2){
+        echo "<div class='link'>";
         echo '<a href="cursus.php"> curus aanmaken / aanpassen </a> ';
         echo '<a class="menu" href="user.php"> Gebruikers </a>';
+        echo '<div>';
     }else{
         echo '<a href="user.php">Gegevens bewerken </a> ';
     }
@@ -100,18 +110,19 @@ if ($role == 2){
     }
 
     echo '
-        <form method="POST" action="" role="form" xmlns="http://www.w3.org/1999/html">
+        <form method="POST" action="" role="form" xmlns="http://www.w3.org/1999/html" class="form-inline">
+        <div class="form-group">
             <label>Naam:</label>
-            <input type="text" name="event_name" id="name"> </input>
+            <input type="text" name="event_name" id="name" class="form-control"> </input> <br/>
 
             <label>Beschrijving</label>
-            <input type="text" name="description" id="description"> </input>
+            <input type="text" name="description" id="description" class="form-control"> </input><br/>
 
             <label>Plaats</label>
-            <input type="text" name="place" id="place" />
+            <input type="text" name="place" id="place" class="form-control"/><br/>
 
             <label>Starttijd</label>
-            <select name="start_time" id="start_time">
+            <select name="start_time" class="form-control" id="start_time">
                 <option id="start_time" value="00:00">00:00</option>
                 <option id="start_time" value="00:30">00:30</option>
                 <option id="start_time" value="01:00">01:00</option>
@@ -163,7 +174,7 @@ if ($role == 2){
             </select>
 
             <label>Eindtijd</label>
-            <select name="end_time" id="end_time">
+            <select name="end_time" class="form-control" id="end_time">
                 <option id="end_time" value="00:00">00:00</option>
                 <option id="end_time" value="00:30">00:30</option>
                 <option id="end_time" value="01:00">01:00</option>
@@ -212,10 +223,10 @@ if ($role == 2){
                 <option id="end_time" value="22:30">22:30</option>
                 <option id="end_time" value="23:00">23:00</option>
                 <option id="end_time" value="23:30">23:30</option>
-            </select>
+            </select><br/>
 
             <label>Datum</label>
-            <select name="month">
+            <select name="month" class="form-control">
                 <option name="month" value="januari">januari</option>
                 <option name="month" value="februari">februari</option>
                 <option name="month" value="maart">maart</option>
@@ -230,7 +241,7 @@ if ($role == 2){
                 <option name="month" value="december">december</option>
             </select>
 
-            <select name="day">
+            <select name="day" class="form-control">
                 <option name="1" value="1">1</option>
                 <option name="2" value="2">2</option>
                 <option name="3" value="3">3</option>
@@ -262,19 +273,20 @@ if ($role == 2){
                 <option name="29" value="29">29</option>
                 <option name="30" value="30">30</option>
                 <option name="31" value="31">31</option>
-            </select>
+            </select  >
 
-            <select name="year">
+            <select name="year" class="form-control" >
                 <option name="year" value="2016">2016</option>
                 <option name="year" value="2016">2017</option>
                 <option name="year" value="2016">2018</option>
                 <option name="year" value="2016">2019</option>
-            </select>
+            </select><br/>
 
             <label>Aantal plekken</label>
-            <input type="number" name="places" min="1" max="500" placeholder="1">
+            <input type="number" name="places" min="1" max="500" placeholder="1" class="form-control" >
 
-            <input type="submit" name="cursus" value="Aanmaken"/>
+            <input type="submit" name="cursus" value="Aanmaken" class="form-control"/>
+            </div>
         </form>
     ';
 
@@ -290,10 +302,18 @@ if ($role == 2){
         echo $rowCursus['event_date'] ;
         echo $rowCursus['description'] ;
         echo $rowCursus['places'];
-        echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanpassen of verwijderen </a>' . "<br/>";
+        echo "<div class='link'> ";
+        echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanpassen of verwijderen </a>';
+        echo "</div>";
+        echo "<div class='link'> ";
         echo '<a href="cursusShow.php?id='.$rowCursus['id'].'"> Aanmeldingen bekijken </a>' . "<br/>";
+        echo "</div>";
     }
 
 
     mysqli_close($db);
 }
+?>
+</div>
+</body>
+

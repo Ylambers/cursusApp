@@ -32,3 +32,4 @@ if($role == 2){
         header("location: cursus.php");
     }
 }
+
