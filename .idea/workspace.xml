@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92432dc0-7044-4fbe-8752-e0f0c27758a4" name="Default" comment="update cursus">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/includes/cursus.php" afterPath="$PROJECT_DIR$/login/includes/cursus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login/includes/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alfa-workshops.iws" />
@@ -60,8 +60,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/includes/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <marker date="1453401511959" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
               </folding>
@@ -69,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cursus.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cursus.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/includes/cursus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70011026">
+            <state vertical-scroll-proportion="-24.423077">
               <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
               <folding>
                 <marker date="1453510658470" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
@@ -89,6 +89,19 @@
                 <marker date="1453510658470" expanded="false" signature="11754:13516" placeholder="..." />
                 <marker date="1453510658470" expanded="true" signature="13550:13824" placeholder="..." />
                 <marker date="1453510658470" expanded="true" signature="14061:14081" placeholder="SELECT * FRO..cursus..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login/includes/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5997795">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
+                <marker date="1453510817711" expanded="true" signature="181:227" placeholder="SELECT * FRO..user..." />
               </folding>
             </state>
           </provider>
@@ -198,6 +211,7 @@
         <option value="$PROJECT_DIR$/login/index.php" />
         <option value="$PROJECT_DIR$/login/includes/manage.php" />
         <option value="$PROJECT_DIR$/login/includes/cursus.php" />
+        <option value="$PROJECT_DIR$/login/includes/user.php" />
       </list>
     </option>
   </component>
@@ -523,7 +537,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453510121763</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update cursus">
+      <created>1453510670154</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1453510670154</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -853,16 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/includes/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <marker date="1453401511959" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.961538">
@@ -893,7 +903,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login/includes/cursus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70011026">
+        <state vertical-scroll-proportion="-24.423077">
           <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
           <folding>
             <marker date="1453510658470" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
@@ -910,6 +920,27 @@
             <marker date="1453510658470" expanded="false" signature="11754:13516" placeholder="..." />
             <marker date="1453510658470" expanded="true" signature="13550:13824" placeholder="..." />
             <marker date="1453510658470" expanded="true" signature="14061:14081" placeholder="SELECT * FRO..cursus..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/includes/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1453401511959" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/includes/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5997795">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1453510817711" expanded="true" signature="181:227" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
