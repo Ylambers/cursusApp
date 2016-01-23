@@ -91,6 +91,9 @@ if($role == 2){
     }
 
     echo '
+        workshop verwijderen <a href="delete.php?id='.$manageId.'" > Klik hier! </a>
+    ';
+    echo '
         <form method="POST" action="" name="updateCursus" role="form" xmlns="http://www.w3.org/1999/html">
             <label>Naam:</label>
             <input type="text" name="event_name" id="name" value="'.$rowQuery['event_name'].'"> </input>
