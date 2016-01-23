@@ -296,13 +296,13 @@ if ($role == 2){
     $queryCursus = mysqli_query($db, $allCursus);
 
     while($rowCursus = mysqli_fetch_array($queryCursus)){
-        echo $rowCursus['event_name'];
-        echo $rowCursus['place'];
-        echo $rowCursus['start_time'] ;
-        echo $rowCursus['end_time'] ;
-        echo $rowCursus['event_date'] ;
-        echo $rowCursus['description'] ;
-        echo $rowCursus['places'];
+        echo $rowCursus['event_name'] . " ";
+        echo $rowCursus['place'] . " ";
+        echo $rowCursus['start_time'] . " ";
+        echo $rowCursus['end_time']. " " ;
+        echo $rowCursus['event_date']. " " ;
+        echo $rowCursus['description'] . " ";
+        echo $rowCursus['places']. " ";
         echo "<div class='link'> ";
         echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanpassen of verwijderen </a>';
         echo "</div>";
