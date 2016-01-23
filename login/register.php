@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>table</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<div class="menubar">
-    <a href="index.php">terug</a>
-</div>
+<a href="index.php">terug</a>
 <body>
 <?php
     $count = 0;
