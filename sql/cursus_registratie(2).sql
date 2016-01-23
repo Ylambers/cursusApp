@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 21 jan 2016 om 23:58
+-- Gegenereerd op: 23 jan 2016 om 04:55
 -- Serverversie: 10.0.17-MariaDB
 -- PHP-versie: 5.6.14
 
@@ -23,27 +23,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `cursus`
+-- Tabelstructuur voor tabel `cursus_registratie`
 --
 
-CREATE TABLE `cursus` (
+CREATE TABLE `cursus_registratie` (
   `id` int(11) NOT NULL,
-  `event_name` varchar(255) NOT NULL,
-  `place` varchar(255) NOT NULL,
-  `start_time` varchar(13) NOT NULL,
-  `end_time` varchar(13) NOT NULL,
-  `event_date` date NOT NULL,
-  `description` varchar(999) NOT NULL
+  `id_user` int(12) NOT NULL,
+  `id_cursus` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `cursus_registratie`
+--
+
+INSERT INTO `cursus_registratie` (`id`, `id_user`, `id_cursus`) VALUES
+(36, 4, 44),
+(37, 5, 44);
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexen voor tabel `cursus`
+-- Indexen voor tabel `cursus_registratie`
 --
-ALTER TABLE `cursus`
+ALTER TABLE `cursus_registratie`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -51,10 +55,10 @@ ALTER TABLE `cursus`
 --
 
 --
--- AUTO_INCREMENT voor een tabel `cursus`
+-- AUTO_INCREMENT voor een tabel `cursus_registratie`
 --
-ALTER TABLE `cursus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `cursus_registratie`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
