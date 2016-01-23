@@ -68,6 +68,7 @@ if($role == 1){
         }else{
             echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanmelden </a>' . "<br/>";
         }
+        echo "<hr/>";
         echo "<br />";
     }
 }
@@ -308,6 +309,8 @@ if ($role == 2){
         echo "<div class='link'> ";
         echo '<a href="cursusShow.php?id='.$rowCursus['id'].'"> Aanmeldingen bekijken </a>' . "<br/>";
         echo "</div>";
+
+        echo "<hr/>";
     }
 
 

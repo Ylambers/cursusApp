@@ -1,3 +1,12 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<div class="container">
+
 <?php
 /**
  * Created by PhpStorm.
@@ -34,6 +43,8 @@ if($role == 1){
     }
 }
 
+$manageId = $_GET['id'];
+
 if($role == 2){
     if(!empty($_SESSION['email'])){
         echo '<div class="menubar">';
@@ -49,7 +60,6 @@ if($role == 2){
         header('location: ../index.php');
     }
 
-    $manageId = $_GET['id'];
 
     $allCursus =  "SELECT * FROM cursus WHERE id='$manageId'";
     $queryCursus = mysqli_query($db, $allCursus);
@@ -91,21 +101,24 @@ if($role == 2){
     }
 
     echo '
+        <div class="delete">
         workshop verwijderen <a href="delete.php?id='.$manageId.'" > Klik hier! </a>
+        </div>
     ';
     echo '
+    <div class="containerForm">
         <form method="POST" action="" name="updateCursus" role="form" xmlns="http://www.w3.org/1999/html">
             <label>Naam:</label>
-            <input type="text" name="event_name" id="name" value="'.$rowQuery['event_name'].'"> </input>
+            <input type="text" name="event_name" class="form-control" id="name" value="'.$rowQuery['event_name'].'"> </input>
 
             <label>Beschrijving</label>
-            <input type="text" name="description" id="description" value="'.$rowQuery['description'].' "> </input>
+            <input type="text" name="description" class="form-control" id="description" value="'.$rowQuery['description'].' "> </input>
 
             <label>Plaats</label>
-            <input type="text" name="place" id="place" value="'.$rowQuery['place'].' " />
+            <input type="text" name="place" id="place" class="form-control" value="'.$rowQuery['place'].' " />
 
             <label>Starttijd</label>
-            <select name="start_time" id="start_time">
+            <select name="start_time" class="form-control" id="start_time">
                 <option id="start_time" value="'.$rowQuery['start_time'].'">'.$rowQuery['start_time'].'</option>
                 <option id="start_time" value="00:00">00:00</option>
                 <option id="start_time" value="00:30">00:30</option>
@@ -158,7 +171,7 @@ if($role == 2){
             </select>
 
             <label>Eindtijd</label>
-            <select name="end_time" id="end_time">
+            <select name="end_time" class="form-control" id="end_time">
                 <option id="end_time" value="'.$rowQuery['end_time'].'">'.$rowQuery['end_time'].'</option>
                 <option id="end_time" value="00:00">00:00</option>
                 <option id="end_time" value="00:30">00:30</option>
@@ -211,8 +224,8 @@ if($role == 2){
             </select>
 
             <label>Datum</label>
-            <select name="month">
-                <option name="month" value="'.$month.'">'.$month.'</option>
+            <select class="form-control" name="month">
+                <option name="month" class="form-control" value="'.$month.'">'.$month.'</option>
                 <option name="month" value="januari">januari</option>
                 <option name="month" value="februari">februari</option>
                 <option name="month" value="maart">maart</option>
@@ -227,8 +240,8 @@ if($role == 2){
                 <option name="month" value="december">december</option>
             </select>
 
-            <select name="day">
-                <option name="1" value="'.$day.'">'.$day.'</option>
+            <select class="form-control" name="day">
+                <option name="1" class="form-control" value="'.$day.'">'.$day.'</option>
                 <option name="1" value="1">1</option>
                 <option name="2" value="2">2</option>
                 <option name="3" value="3">3</option>
@@ -262,7 +275,7 @@ if($role == 2){
                 <option name="31" value="31">31</option>
             </select>
 
-            <select name="year">
+            <select  class="form-control" name="year">
                 <option name="year" value="'.$year.'">'.$year.'</option>
                 <option name="year" value="2016">2016</option>
                 <option name="year" value="2016">2017</option>
@@ -271,9 +284,9 @@ if($role == 2){
             </select>
 
             <label>Aantal plekken</label>
-            <input type="number" name="places" min="1" max="500" value="'.$rowQuery['places'].'"/>
+            <input type="number" name="places" class="form-control" min="1" max="500" value="'.$rowQuery['places'].'"/>
 
-            <input type="submit" name="updateCursus" value="Aanmaken"/>
+            <input type="submit" class="form-control" name="updateCursus" value="Aanmaken"/>
         </form>
 
     ';

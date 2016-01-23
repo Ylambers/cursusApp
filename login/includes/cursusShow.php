@@ -1,3 +1,12 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<div class="container">
+
 <?php
 /**
  * Created by PhpStorm.
@@ -44,10 +53,11 @@ if($role == 2){
         $allUserId = "SELECT * FROM user WHERE id='$userId'";
         $userResult = mysqli_query($db, $allUserId);
         while($rowUser = mysqli_fetch_array($userResult)){
-            echo $rowUser['firstname'];
-            echo $rowUser['lastname'];
-            echo $rowUser['email'];
+            echo $rowUser['firstname'] . " ";
+            echo $rowUser['lastname'] . " ";
+            echo $rowUser['email']. " ";
             echo $rowUser['phone'] . "<br/>";
+            echo "<hr/>";
         }
     }
 
