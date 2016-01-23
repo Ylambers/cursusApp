@@ -27,7 +27,7 @@ $role = $row['user_level'];
 if(!empty($_SESSION['email'])){
     echo '<div class="menubar">';
     echo "<h2>"."Welkom ". $userName."</h2>"."<br/>";
-    echo '<a href="ticket.php">Home </a> ';
+    echo '<a href="cursus.php">Home </a> ';
     echo '<a class="menu" href="user.php"> Alle users </a>';
     echo '<a href="logout.php">Uitloggen </a>';
     echo '</div>';

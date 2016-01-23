@@ -21,6 +21,7 @@ if(!empty($_SESSION['email'])){
     echo "<h2>"."Welkom ". $userName."</h2>"."<br/>";
     if($role == 2){
         echo '<a href="cursus.php"> curus aanmaken / aanpassen </a> ';
+        echo '<a class="menu" href="user.php"> Gebruikers </a>';
     }else{
         echo '<a href="user.php">Gegevens bewerken </a> ';
     }
@@ -290,6 +291,7 @@ if ($role == 2){
         echo $rowCursus['description'] ;
         echo $rowCursus['places'];
         echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanpassen of verwijderen </a>' . "<br/>";
+        echo '<a href="cursusShow.php?id='.$rowCursus['id'].'"> Aanmeldingen bekijken </a>' . "<br/>";
     }
 
 

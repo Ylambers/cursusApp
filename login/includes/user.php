@@ -34,8 +34,7 @@ if ($role == 2){
 if(!empty($_SESSION['email'])){
     echo '<div class="menubar">';
     echo "<h2>"."Welkom ". $userName."</h2>"."<br/>";
-    echo '<a href="ticket.php">Home </a> ';
-    echo '<a class="menu" href="ticket.php"> Alle tickets </a>';
+    echo '<a class="menu" href="cursus.php"> Alle tickets </a>';
     echo '<a href="logout.php">Uitloggen </a>';
     echo '</div>';
 }else{
@@ -90,7 +89,6 @@ if ($role == 2){
         <th>Achternaam</th>
         <th>Email</th>
         <th>telefoon</th>
-        <th>Rechten</th>
         <th>Aanpassen</th>
     <tr>
     ';
@@ -100,7 +98,6 @@ if ($role == 2){
         echo '<th>'.$rowUser['lastname'] ."</th>";
         echo '<th>'.$rowUser['email']. "</th>";
         echo '<th>'.$rowUser['phone'] ."</th>";
-        echo '<th>'.$roleName."</th>";
         echo '<th>'.'<a href="handleuser.php?id='.$rowUser['id'].'"> Aanpassen </a> </th>';
         echo '</tr>';
     }

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92432dc0-7044-4fbe-8752-e0f0c27758a4" name="Default" comment="added user">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login/includes/handleuser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login/includes/cursusShow.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/includes/cursus.php" afterPath="$PROJECT_DIR$/login/includes/cursus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/includes/handleuser.php" afterPath="$PROJECT_DIR$/login/includes/handleuser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/includes/user.php" afterPath="$PROJECT_DIR$/login/includes/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -46,18 +48,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login/includes/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-              <folding>
-                <marker date="1453324966181" expanded="true" signature="232:308" placeholder="SELECT * FRO..user..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/includes/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,23 +63,23 @@
       <file leaf-file-name="cursus.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/includes/cursus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.423077">
-              <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
+            <state vertical-scroll-proportion="-28.346153">
+              <caret line="293" column="33" selection-start-line="293" selection-start-column="33" selection-end-line="293" selection-end-column="33" />
               <folding>
-                <marker date="1453510658470" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
-                <marker date="1453510658470" expanded="true" signature="853:873" placeholder="SELECT * FRO..cursus..." />
-                <marker date="1453510658470" expanded="true" signature="1100:1147" placeholder="SELECT * FRO..cursus_registratie..." />
-                <marker date="1453510658470" expanded="true" signature="1100:1152" placeholder="SELECT * FRO..cursus_registratie..." />
-                <marker date="1453510658470" expanded="true" signature="1100:1168" placeholder="SELECT * FRO..cursus_registratie..." />
-                <marker date="1453510658470" expanded="true" signature="1100:1189" placeholder="SELECT * FRO..cursus_registratie..." />
-                <marker date="1453510658470" expanded="true" signature="3303:3493" placeholder="INSERT INTO ..." />
-                <marker date="1453510658470" expanded="true" signature="3741:14032" placeholder="..." />
-                <marker date="1453510658470" expanded="false" signature="4147:7481" placeholder="..." />
-                <marker date="1453510658470" expanded="false" signature="7569:10807" placeholder="..." />
-                <marker date="1453510658470" expanded="false" signature="10875:11721" placeholder="..." />
-                <marker date="1453510658470" expanded="false" signature="11754:13516" placeholder="..." />
-                <marker date="1453510658470" expanded="true" signature="13550:13824" placeholder="..." />
-                <marker date="1453510658470" expanded="true" signature="14061:14081" placeholder="SELECT * FRO..cursus..." />
+                <marker date="1453514678034" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514678034" expanded="true" signature="918:938" placeholder="SELECT * FRO..cursus..." />
+                <marker date="1453514678034" expanded="true" signature="1165:1212" placeholder="SELECT * FRO..cursus_registratie..." />
+                <marker date="1453514678034" expanded="true" signature="1165:1217" placeholder="SELECT * FRO..cursus_registratie..." />
+                <marker date="1453514678034" expanded="true" signature="1165:1233" placeholder="SELECT * FRO..cursus_registratie..." />
+                <marker date="1453514678034" expanded="true" signature="1165:1254" placeholder="SELECT * FRO..cursus_registratie..." />
+                <marker date="1453514678034" expanded="true" signature="3368:3558" placeholder="INSERT INTO ..." />
+                <marker date="1453514678034" expanded="true" signature="3806:14097" placeholder="..." />
+                <marker date="1453514678034" expanded="false" signature="4212:7546" placeholder="..." />
+                <marker date="1453514678034" expanded="false" signature="7634:10872" placeholder="..." />
+                <marker date="1453514678034" expanded="false" signature="10940:11786" placeholder="..." />
+                <marker date="1453514678034" expanded="false" signature="11819:13581" placeholder="..." />
+                <marker date="1453514678034" expanded="true" signature="13615:13889" placeholder="..." />
+                <marker date="1453514678034" expanded="true" signature="14126:14146" placeholder="SELECT * FRO..cursus..." />
               </folding>
             </state>
           </provider>
@@ -98,48 +88,63 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/includes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.269231">
-              <caret line="77" column="29" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="29" />
+            <state vertical-scroll-proportion="-22.884615">
+              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
               <folding>
-                <marker date="1453511077879" expanded="true" signature="466:512" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511077879" expanded="true" signature="1273:1589" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="1306:1577" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="1349:1555" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="1713:1813" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511077879" expanded="true" signature="1926:2180" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="1978:2167" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="2171:2180" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="2725:2743" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511077879" expanded="true" signature="2843:3021" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="2852:3012" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="3016:3021" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="3495:3528" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511077879" expanded="true" signature="4145:4185" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511077879" expanded="true" signature="4907:5013" placeholder="UPDATE user ..." />
-                <marker date="1453511077879" expanded="true" signature="5240:6086" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="5281:6075" placeholder="..." />
-                <marker date="1453511077879" expanded="true" signature="5318:6059" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="466:512" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514533356" expanded="true" signature="1229:1545" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="1262:1533" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="1305:1511" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="1669:1769" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514533356" expanded="true" signature="1882:2136" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="1934:2123" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="2127:2136" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="2681:2699" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514533356" expanded="true" signature="2799:2952" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="2808:2943" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="2947:2952" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="3387:3420" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514533356" expanded="true" signature="4037:4077" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514533356" expanded="true" signature="4799:4905" placeholder="UPDATE user ..." />
+                <marker date="1453514533356" expanded="true" signature="5132:5978" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="5173:5967" placeholder="..." />
+                <marker date="1453514533356" expanded="true" signature="5210:5951" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handleuser.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cursusShow.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login/includes/cursusShow.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7684675">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
+                <marker date="1453516167970" expanded="true" signature="181:227" placeholder="SELECT * FRO..user..." />
+                <marker date="1453516167970" expanded="true" signature="950:999" placeholder="SELECT * FRO..cursus_registratie..." />
+                <marker date="1453516167970" expanded="true" signature="950:1010" placeholder="SELECT * FRO..cursus_registratie..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="handleuser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/includes/handleuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3325766">
-              <caret line="56" column="125" selection-start-line="56" selection-start-column="125" selection-end-line="56" selection-end-column="125" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
-                <marker date="1453511185364" expanded="true" signature="467:513" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511185364" expanded="true" signature="1576:1616" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511185364" expanded="true" signature="2338:2465" placeholder="UPDATE user ..." />
-                <marker date="1453511185364" expanded="true" signature="2694:2734" placeholder="SELECT * FRO..user..." />
-                <marker date="1453511185364" expanded="true" signature="2939:3573" placeholder="..." />
-                <marker date="1453511185364" expanded="true" signature="2986:3573" placeholder="..." />
-                <marker date="1453511185364" expanded="true" signature="3017:3573" placeholder="..." />
-                <marker date="1453511185364" expanded="true" signature="3652:3790" placeholder="..." />
-                <marker date="1453511185364" expanded="true" signature="3892:4034" placeholder="..." />
-                <marker date="1453511185364" expanded="true" signature="4118:4260" placeholder="..." />
+                <marker date="1453514436968" expanded="true" signature="467:513" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514436968" expanded="true" signature="1576:1616" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514436968" expanded="true" signature="2338:2465" placeholder="UPDATE user ..." />
+                <marker date="1453514436968" expanded="true" signature="2694:2734" placeholder="SELECT * FRO..user..." />
+                <marker date="1453514436968" expanded="true" signature="2939:3573" placeholder="..." />
+                <marker date="1453514436968" expanded="true" signature="2986:3573" placeholder="..." />
+                <marker date="1453514436968" expanded="true" signature="3017:3573" placeholder="..." />
+                <marker date="1453514436968" expanded="true" signature="3652:3790" placeholder="..." />
+                <marker date="1453514436968" expanded="true" signature="3892:4034" placeholder="..." />
+                <marker date="1453514436968" expanded="true" signature="4118:4260" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -232,9 +237,10 @@
         <option value="$PROJECT_DIR$/login/includes/database.php" />
         <option value="$PROJECT_DIR$/login/index.php" />
         <option value="$PROJECT_DIR$/login/includes/manage.php" />
-        <option value="$PROJECT_DIR$/login/includes/cursus.php" />
-        <option value="$PROJECT_DIR$/login/includes/user.php" />
         <option value="$PROJECT_DIR$/login/includes/handleuser.php" />
+        <option value="$PROJECT_DIR$/login/includes/user.php" />
+        <option value="$PROJECT_DIR$/login/includes/cursus.php" />
+        <option value="$PROJECT_DIR$/login/includes/cursusShow.php" />
       </list>
     </option>
   </component>
@@ -572,11 +578,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453510825958</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added user">
+      <created>1453511215711</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1453511215711</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14270833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -642,17 +654,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/login/includes/cursus.php</url>
-          <line>265</line>
+          <line>266</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/login/includes/cursus.php</url>
-          <line>216</line>
+          <line>217</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/login/includes/cursus.php</url>
-          <line>64</line>
+          <line>65</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -687,7 +699,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <marker date="1453324966181" expanded="true" signature="232:308" placeholder="SELECT * FRO..user..." />
+            <marker date="1453324966181" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
@@ -707,20 +719,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1453510658470" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
-            <marker date="1453510658470" expanded="true" signature="853:873" placeholder="SELECT * FRO..cursus..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1147" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1152" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1168" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1189" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="3303:3493" placeholder="INSERT INTO ..." />
-            <marker date="1453510658470" expanded="true" signature="3741:14032" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="4147:7481" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="7569:10807" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="10875:11721" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="11754:13516" placeholder="..." />
-            <marker date="1453510658470" expanded="true" signature="13550:13824" placeholder="..." />
-            <marker date="1453510658470" expanded="true" signature="14061:14081" placeholder="SELECT * FRO..cursus..." />
+            <marker date="1453514678034" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514678034" expanded="true" signature="918:938" placeholder="SELECT * FRO..cursus..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1212" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1217" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1233" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1254" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="3368:3558" placeholder="INSERT INTO ..." />
+            <marker date="1453514678034" expanded="true" signature="3806:14097" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="4212:7546" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="7634:10872" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="10940:11786" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="11819:13581" placeholder="..." />
+            <marker date="1453514678034" expanded="true" signature="13615:13889" placeholder="..." />
+            <marker date="1453514678034" expanded="true" signature="14126:14146" placeholder="SELECT * FRO..cursus..." />
           </folding>
         </state>
       </provider>
@@ -776,7 +788,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <marker date="1453324966181" expanded="true" signature="232:308" placeholder="SELECT * FRO..user..." />
+            <marker date="1453324966181" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
@@ -874,7 +886,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <marker date="1453324966181" expanded="true" signature="232:308" placeholder="SELECT * FRO..user..." />
+            <marker date="1453324966181" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
@@ -903,14 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login/includes/manage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
@@ -931,26 +935,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/includes/cursus.php">
+    <entry file="file://$PROJECT_DIR$/login/includes/handleuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.423077">
-          <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
-            <marker date="1453510658470" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
-            <marker date="1453510658470" expanded="true" signature="853:873" placeholder="SELECT * FRO..cursus..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1147" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1152" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1168" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="1100:1189" placeholder="SELECT * FRO..cursus_registratie..." />
-            <marker date="1453510658470" expanded="true" signature="3303:3493" placeholder="INSERT INTO ..." />
-            <marker date="1453510658470" expanded="true" signature="3741:14032" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="4147:7481" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="7569:10807" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="10875:11721" placeholder="..." />
-            <marker date="1453510658470" expanded="false" signature="11754:13516" placeholder="..." />
-            <marker date="1453510658470" expanded="true" signature="13550:13824" placeholder="..." />
-            <marker date="1453510658470" expanded="true" signature="14061:14081" placeholder="SELECT * FRO..cursus..." />
+            <marker date="1453514436968" expanded="true" signature="467:513" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514436968" expanded="true" signature="1576:1616" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514436968" expanded="true" signature="2338:2465" placeholder="UPDATE user ..." />
+            <marker date="1453514436968" expanded="true" signature="2694:2734" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514436968" expanded="true" signature="2939:3573" placeholder="..." />
+            <marker date="1453514436968" expanded="true" signature="2986:3573" placeholder="..." />
+            <marker date="1453514436968" expanded="true" signature="3017:3573" placeholder="..." />
+            <marker date="1453514436968" expanded="true" signature="3652:3790" placeholder="..." />
+            <marker date="1453514436968" expanded="true" signature="3892:4034" placeholder="..." />
+            <marker date="1453514436968" expanded="true" signature="4118:4260" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.961538">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -966,46 +974,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login/includes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.269231">
-          <caret line="77" column="29" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="29" />
+        <state vertical-scroll-proportion="-22.884615">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
           <folding>
-            <marker date="1453511077879" expanded="true" signature="466:512" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511077879" expanded="true" signature="1273:1589" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="1306:1577" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="1349:1555" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="1713:1813" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511077879" expanded="true" signature="1926:2180" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="1978:2167" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="2171:2180" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="2725:2743" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511077879" expanded="true" signature="2843:3021" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="2852:3012" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="3016:3021" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="3495:3528" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511077879" expanded="true" signature="4145:4185" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511077879" expanded="true" signature="4907:5013" placeholder="UPDATE user ..." />
-            <marker date="1453511077879" expanded="true" signature="5240:6086" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="5281:6075" placeholder="..." />
-            <marker date="1453511077879" expanded="true" signature="5318:6059" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="466:512" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514533356" expanded="true" signature="1229:1545" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="1262:1533" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="1305:1511" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="1669:1769" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514533356" expanded="true" signature="1882:2136" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="1934:2123" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="2127:2136" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="2681:2699" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514533356" expanded="true" signature="2799:2952" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="2808:2943" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="2947:2952" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="3387:3420" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514533356" expanded="true" signature="4037:4077" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514533356" expanded="true" signature="4799:4905" placeholder="UPDATE user ..." />
+            <marker date="1453514533356" expanded="true" signature="5132:5978" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="5173:5967" placeholder="..." />
+            <marker date="1453514533356" expanded="true" signature="5210:5951" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/includes/handleuser.php">
+    <entry file="file://$PROJECT_DIR$/login/includes/cursus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325766">
-          <caret line="56" column="125" selection-start-line="56" selection-start-column="125" selection-end-line="56" selection-end-column="125" />
+        <state vertical-scroll-proportion="-28.346153">
+          <caret line="293" column="33" selection-start-line="293" selection-start-column="33" selection-end-line="293" selection-end-column="33" />
           <folding>
-            <marker date="1453511185364" expanded="true" signature="467:513" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511185364" expanded="true" signature="1576:1616" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511185364" expanded="true" signature="2338:2465" placeholder="UPDATE user ..." />
-            <marker date="1453511185364" expanded="true" signature="2694:2734" placeholder="SELECT * FRO..user..." />
-            <marker date="1453511185364" expanded="true" signature="2939:3573" placeholder="..." />
-            <marker date="1453511185364" expanded="true" signature="2986:3573" placeholder="..." />
-            <marker date="1453511185364" expanded="true" signature="3017:3573" placeholder="..." />
-            <marker date="1453511185364" expanded="true" signature="3652:3790" placeholder="..." />
-            <marker date="1453511185364" expanded="true" signature="3892:4034" placeholder="..." />
-            <marker date="1453511185364" expanded="true" signature="4118:4260" placeholder="..." />
+            <marker date="1453514678034" expanded="true" signature="180:226" placeholder="SELECT * FRO..user..." />
+            <marker date="1453514678034" expanded="true" signature="918:938" placeholder="SELECT * FRO..cursus..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1212" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1217" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1233" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="1165:1254" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453514678034" expanded="true" signature="3368:3558" placeholder="INSERT INTO ..." />
+            <marker date="1453514678034" expanded="true" signature="3806:14097" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="4212:7546" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="7634:10872" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="10940:11786" placeholder="..." />
+            <marker date="1453514678034" expanded="false" signature="11819:13581" placeholder="..." />
+            <marker date="1453514678034" expanded="true" signature="13615:13889" placeholder="..." />
+            <marker date="1453514678034" expanded="true" signature="14126:14146" placeholder="SELECT * FRO..cursus..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/includes/cursusShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7684675">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1453516167970" expanded="true" signature="181:227" placeholder="SELECT * FRO..user..." />
+            <marker date="1453516167970" expanded="true" signature="950:999" placeholder="SELECT * FRO..cursus_registratie..." />
+            <marker date="1453516167970" expanded="true" signature="950:1010" placeholder="SELECT * FRO..cursus_registratie..." />
           </folding>
         </state>
       </provider>
