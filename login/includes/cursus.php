@@ -44,9 +44,6 @@ if(!empty($_SESSION['email'])){
 if($role == 1){
     $allCursus = "SELECT * FROM cursus";
     $query = mysqli_query($db, $allCursus);
-    $rowIdCursus = mysqli_fetch_array($query);
-    $idCursus = $rowIdCursus['id']; // kan dit?
-
 
     while($rowCursus = mysqli_fetch_array($query) ){
 
@@ -55,7 +52,6 @@ if($role == 1){
         $rowRegistrations = mysqli_fetch_array($queryRegistrations);
         $userId = $rowRegistrations['id_user'];
         $cursusId = $rowRegistrations['id_cursus'];
-
 
         echo '<h1>'.$rowCursus['event_name']. '</h1><br/> ';
         echo '<h4>'.$rowCursus['description']. '</h4><br/> ';
