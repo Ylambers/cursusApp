@@ -53,6 +53,7 @@ if($role == 2){
         $allUserId = "SELECT * FROM user WHERE id='$userId'";
         $userResult = mysqli_query($db, $allUserId);
         while($rowUser = mysqli_fetch_array($userResult)){
+
             echo $rowUser['firstname'] . " ";
             echo $rowUser['lastname'] . " ";
             echo $rowUser['email']. " ";

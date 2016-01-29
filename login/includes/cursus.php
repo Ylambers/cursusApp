@@ -56,20 +56,22 @@ if($role == 1){
         $userId = $rowRegistrations['id_user'];
         $cursusId = $rowRegistrations['id_cursus'];
 
-        echo $rowCursus['event_name'];
-        echo $rowCursus['description'];
-        echo $rowCursus['places'];
-        echo $rowCursus['place'];
-        echo $rowCursus['start_time'];
-        echo $rowCursus['end_time'];
-        echo $rowCursus['event_date'];
+
+        echo '<h1>'.$rowCursus['event_name']. '</h1><br/> ';
+        echo '<h4>'.$rowCursus['description']. '</h4><br/> ';
+        echo '<strong> Aantalplekken:</strong> '.$rowCursus['places']. '<br/> ';
+        echo '<strong>Locatie: </strong>'. $rowCursus['place']. '<br/> ';
+        echo '<strong>Start tijd:</strong> '.$rowCursus['start_time']. '<br/> ';
+        echo '<strong>Eind tijd:</strong> '.$rowCursus['end_time']. '<br/> ';
+        echo '<strong>Datum: </strong>'. $rowCursus['event_date']. '<br/>' ;
         if($userId && $cursusId == $rowCursus['id'] && $id){
-            echo 'U bent aangemeld voor deze workshop!'. "</br>";
+            echo ' <strong>U bent aangemeld voor deze workshop! </strong>'."</br>";
         }else{
             echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanmelden </a>' . "<br/>";
         }
         echo "<hr/>";
         echo "<br />";
+
     }
 }
 
