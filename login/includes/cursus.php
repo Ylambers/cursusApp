@@ -306,10 +306,10 @@ if ($role == 2){
         echo '<strong>Eind tijd:</strong> '.$rowCursus['end_time']. '<br/> ';
         echo '<strong>Datum: </strong>'. $rowCursus['event_date']. '<br/>' ;
         echo "<div class='link'> ";
-        echo '<a href="manage.php?id='.$rowCursus['id'].'"> Aanpassen of verwijderen </a>';
+        echo '<a href="manage.php?id='.$rowCursus['id'].'">Aanpassen of verwijderen </a>';
         echo "</div>";
         echo "<div class='link'> ";
-        echo '<a href="cursusShow.php?id='.$rowCursus['id'].'"> Aanmeldingen bekijken </a>' . "<br/>";
+        echo '<a href="cursusShow.php?id='.$rowCursus['id'].'">Aanmeldingen bekijken </a>' . "<br/>";
         echo "</div>";
 
         echo "<hr/>";
