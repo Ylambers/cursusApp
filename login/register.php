@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<a href="index.php">terug</a>
 <body>
+
+<div class="container">
+    <a href="index.php">terug</a>
+
 <?php
     $count = 0;
     include_once('includes/database.php');
@@ -76,3 +79,5 @@
                 </form>
         </div>
 ';
+?>
+    </div>
