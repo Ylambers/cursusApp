@@ -10,6 +10,7 @@
 <body>
 <!--Pulling Awesome Font -->
 <div class="container">
+    <a href="../index.php">Home</a>
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
             <form class="form-login" action="includes/login.php" method="post">
