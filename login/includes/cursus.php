@@ -109,16 +109,16 @@ if ($role == 2){
     }
 
     echo '
-        <form method="POST" action="" role="form" xmlns="http://www.w3.org/1999/html" class="form-inline">
         <div class="form-group">
+        <form method="POST" action="">
             <label>Naam:</label>
-            <input type="text" name="event_name" id="name" class="form-control"> </input> <br/>
+            <input type="text" name="event_name" id="name" class="form-control"> </input>
 
             <label>Beschrijving</label>
-            <input type="text" name="description" id="description" class="form-control"> </input><br/>
+            <input type="text" name="description" id="description" class="form-control"> </input>
 
             <label>Plaats</label>
-            <input type="text" name="place" id="place" class="form-control"/><br/>
+            <input type="text" name="place" id="place" class="form-control" />
 
             <label>Starttijd</label>
             <select name="start_time" class="form-control" id="start_time">
@@ -222,7 +222,7 @@ if ($role == 2){
                 <option id="end_time" value="22:30">22:30</option>
                 <option id="end_time" value="23:00">23:00</option>
                 <option id="end_time" value="23:30">23:30</option>
-            </select><br/>
+            </select>
 
             <label>Datum</label>
             <select name="month" class="form-control">
@@ -272,14 +272,14 @@ if ($role == 2){
                 <option name="29" value="29">29</option>
                 <option name="30" value="30">30</option>
                 <option name="31" value="31">31</option>
-            </select  >
+            </select>
 
             <select name="year" class="form-control" >
                 <option name="year" value="2016">2016</option>
                 <option name="year" value="2016">2017</option>
                 <option name="year" value="2016">2018</option>
                 <option name="year" value="2016">2019</option>
-            </select><br/>
+            </select>
 
             <label>Aantal plekken</label>
             <input type="number" name="places" min="1" max="500" placeholder="1" class="form-control" >
@@ -293,22 +293,24 @@ if ($role == 2){
     $allCursus = "SELECT * FROM cursus";
     $queryCursus = mysqli_query($db, $allCursus);
 
-    while($rowCursus = mysqli_fetch_array($queryCursus)){
-        echo '<h1>'.$rowCursus['event_name']. '</h1><br/> ';
-        echo '<h4>'.$rowCursus['description']. '</h4><br/> ';
-        echo '<strong> Aantalplekken:</strong> '.$rowCursus['places']. '<br/> ';
-        echo '<strong>Locatie: </strong>'. $rowCursus['place']. '<br/> ';
-        echo '<strong>Start tijd:</strong> '.$rowCursus['start_time']. '<br/> ';
-        echo '<strong>Eind tijd:</strong> '.$rowCursus['end_time']. '<br/> ';
-        echo '<strong>Datum: </strong>'. $rowCursus['event_date']. '<br/>' ;
-        echo "<div class='link'> ";
-        echo '<a href="manage.php?id='.$rowCursus['id'].'">Aanpassen of verwijderen </a>';
-        echo "</div>";
-        echo "<div class='link'> ";
-        echo '<a href="cursusShow.php?id='.$rowCursus['id'].'">Aanmeldingen bekijken </a>' . "<br/>";
-        echo "</div>";
+    echo '<div class="container-items"> ';
+        while($rowCursus = mysqli_fetch_array($queryCursus)){
+            echo '<h1>'.$rowCursus['event_name']. '</h1><br/> ';
+            echo '<h4>'.$rowCursus['description']. '</h4><br/> ';
+            echo '<strong> Aantalplekken:</strong> '.$rowCursus['places']. '<br/> ';
+            echo '<strong>Locatie: </strong>'. $rowCursus['place']. '<br/> ';
+            echo '<strong>Start tijd:</strong> '.$rowCursus['start_time']. '<br/> ';
+            echo '<strong>Eind tijd:</strong> '.$rowCursus['end_time']. '<br/> ';
+            echo '<strong>Datum: </strong>'. $rowCursus['event_date']. '<br/>' ;
+            echo "<div class='link'> ";
+            echo '<a href="manage.php?id='.$rowCursus['id'].'">Aanpassen of verwijderen </a>';
+            echo "</div>";
+            echo "<div class='link'> ";
+            echo '<a href="cursusShow.php?id='.$rowCursus['id'].'">Aanmeldingen bekijken </a>' . "<br/>";
+            echo "</div>";
 
-        echo "<hr/>";
+            echo "<hr/>";
+        echo '</div>';
     }
 
 

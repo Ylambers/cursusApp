@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.0.2
+-- version 4.4.12
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Gegenereerd op: 24 jan 2016 om 17:18
--- Serverversie: 10.0.17-MariaDB
--- PHP-versie: 5.6.14
+-- Host: localhost
+-- Gegenereerd op: 18 feb 2016 om 16:09
+-- Serverversie: 5.6.25
+-- PHP-versie: 5.6.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,8 +26,9 @@ SET time_zone = "+00:00";
 -- Tabelstructuur voor tabel `cursus`
 --
 
-CREATE TABLE `cursus` (
+CREATE TABLE IF NOT EXISTS `cursus` (
   `id` int(11) NOT NULL,
+  `id_soort_cursus` int(10) NOT NULL,
   `event_name` varchar(255) NOT NULL,
   `place` varchar(255) NOT NULL,
   `start_time` varchar(13) NOT NULL,
@@ -37,37 +38,29 @@ CREATE TABLE `cursus` (
   `places` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Gegevens worden geëxporteerd voor tabel `cursus`
---
-
-INSERT INTO `cursus` (`id`, `event_name`, `place`, `start_time`, `end_time`, `event_date`, `description`, `places`) VALUES
-(44, 'Fietsen', 'berlijn', '00:00', '00:00', '1-januari-2016', 'fietsen ', 23),
-(45, 'Fietsen', 'berlij', '00:00', '00:00', '1-januari-2016', 'fietsen', 23),
-(46, 'fdfsdfsdf', 'sdfsdfsdfsd', '00:00', '04:00', '1-januari-2016', 'sdfsdfsdf', 34),
-(47, 'fdfsdfsdf', 'sdfsdfsdfsd', '00:00', '04:00', '1-januari-2016', 'sdfsdfsdf', 34),
-(48, 'sdasdasd', 'asdasdasdas', '00:00', '00:00', '1-januari-2016', 'sdasdasd', 0);
-
 -- --------------------------------------------------------
 
 --
 -- Tabelstructuur voor tabel `cursus_registratie`
 --
 
-CREATE TABLE `cursus_registratie` (
+CREATE TABLE IF NOT EXISTS `cursus_registratie` (
   `id` int(11) NOT NULL,
   `id_user` int(12) NOT NULL,
   `id_cursus` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Gegevens worden geëxporteerd voor tabel `cursus_registratie`
+-- Tabelstructuur voor tabel `cursus_soort`
 --
 
-INSERT INTO `cursus_registratie` (`id`, `id_user`, `id_cursus`) VALUES
-(36, 4, 44),
-(37, 5, 44),
-(38, 4, 46);
+CREATE TABLE IF NOT EXISTS `cursus_soort` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -75,24 +68,16 @@ INSERT INTO `cursus_registratie` (`id`, `id_user`, `id_cursus`) VALUES
 -- Tabelstructuur voor tabel `user`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `id` int(9) NOT NULL,
   `password` varchar(32) NOT NULL,
   `user_level` int(3) NOT NULL DEFAULT '1',
   `firstname` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
+  `interleaving_couple` varchar(255) DEFAULT NULL,
   `phone` varchar(12) NOT NULL,
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Gegevens worden geëxporteerd voor tabel `user`
---
-
-INSERT INTO `user` (`id`, `password`, `user_level`, `firstname`, `lastname`, `phone`, `email`) VALUES
-(4, '21232f297a57a5a743894a0e4a801fc3', 2, 'yaron', 'lambers', '0620923399', 'y.lambers@outlook.com'),
-(5, '21232f297a57a5a743894a0e4a801fc3', 2, 'Bruce', 'Waynee', '0620923399', 'badman@hotmail.com'),
-(6, '21232f297a57a5a743894a0e4a801fc3', 1, 'yaron', 'lambers', '6209233990', 'fietsje@hotmail.com');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -111,6 +96,12 @@ ALTER TABLE `cursus_registratie`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `cursus_soort`
+--
+ALTER TABLE `cursus_soort`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexen voor tabel `user`
 --
 ALTER TABLE `user`
@@ -124,17 +115,22 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT voor een tabel `cursus`
 --
 ALTER TABLE `cursus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT voor een tabel `cursus_registratie`
 --
 ALTER TABLE `cursus_registratie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT voor een tabel `cursus_soort`
+--
+ALTER TABLE `cursus_soort`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT voor een tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
